@@ -1,0 +1,40 @@
+.equal-height-thumbnail {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.equal-height-thumbnail li {
+    width: 30%;
+    margin: 0 1% 20px;
+    padding: 0.5%;
+    background: #FFF;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1)
+}
+
+.equal-height-thumbnail figure {
+    display: block;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.equal-height-thumbnail img {
+    height: 200px;
+    width: 300px;
+}
+
+.caption {
+    padding: 2%;
+}
+
+li:hover {
+    cursor: hand;
+    cursor: pointer;
+
+}

@@ -1,0 +1,15 @@
+<h3>{{vm.title}}</h3>
+<div class="row-fluid">
+    <ul class="equal-height-thumbnail" id="articles-list">
+        <li class="article-main-info" ng-repeat="article in vm.articles.items" ng-click="showDetails = ! showDetails">
+            <img ng-src="{{article.enclosure.url}}"/>
+            <h5>{{article.title}}</h5>
+
+            <div class="caption" ng-show="showDetails">
+                <p>{{article.description}}</p>
+
+                <p>Link: <a href="{{article.link}}" target="_blank">{{article.link}}</a></p>
+            </div>
+        </li>
+    </ul>
+</div>
