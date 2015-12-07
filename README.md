@@ -1,7 +1,7 @@
 # yahoo_pipes_angular
 
 ### Run
-Install node modules (e.g. using the Command Prompt, navigate to the node_modules directory)
+Install node modules (e.g. using the Command Prompt, navigate to the parent directory)
 
 	C:\Projects\yahoo_pipes_angular> npm install 
 
