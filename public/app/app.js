@@ -1,7 +1,11 @@
 (function () {
     "use strict";
+
     var app = angular.module("articlesList",
-        ["ui.router"]);
+                            ["common.services",
+                             "ui.router"
+                            ]);
+
     app.config(function ($provide) {
         $provide.decorator("$exceptionHandler",
             ["$delegate",
@@ -14,6 +18,7 @@
                     };
                 }]);
     });
+
     app.config(["$stateProvider",
         "$urlRouterProvider",
         function ($stateProvider, $urlRouterProvider) {
@@ -24,9 +29,8 @@
                     templateUrl: "app/articles/articlesListView.html",
                     controller: "articlesListCtrl as vm",
                     resolve: {
-                        articles: function ($http) {
-                            return $http.get("http://real.pipes.yahoo.com/pipes/pipe.run?_id=e9a2e77dffb3205d035c4e311d77bbe6&_render=json");
-
+                        articles: function (dataResource) {
+                            return dataResource.getArticles();
                         }
                     }
                 })

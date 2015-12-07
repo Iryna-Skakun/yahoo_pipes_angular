@@ -1,7 +1,7 @@
 <h3>{{vm.title}}</h3>
 <div class="row-fluid">
     <ul class="equal-height-thumbnail" id="articles-list">
-        <li class="article-main-info" ng-repeat="article in vm.articles.items" ng-click="showDetails = ! showDetails">
+        <li class="article-main-info" ng-repeat="article in vm.articles" ng-click="showDetails = ! showDetails">
             <img ng-src="{{article.enclosure.url}}"/>
             <h5>{{article.title}}</h5>
 
